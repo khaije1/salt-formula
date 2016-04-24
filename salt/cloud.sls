@@ -1,4 +1,4 @@
-{% from "salt/map.jinja" import salt_settings with context %}
+{% from slspath + "/map.jinja" import salt_settings with context %}
 
 {% set cloudmaps = salt['pillar.get']('salt:cloud:maps', {}) -%}
 {% set cloudprofiles = salt['pillar.get']('salt:cloud:profiles', {}) -%}

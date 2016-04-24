@@ -1,7 +1,11 @@
-{% from "salt/map.jinja" import salt_settings with context %}
+{% from slspath + "/map.jinja" import salt_settings with context %}
 
 include:
-  - salt.master
+  #{% if slspath.replace("/", ".") == "salt-formula.salt" %}
+  - formula.salt.master
+  #{% else %}
+  #- {% slspath.replace("/", ".") + "." + "master" %}
+  #{% endif %}
 
 salt-api:
 {% if salt_settings.install_packages %}

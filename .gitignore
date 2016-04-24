@@ -1,3 +1,44 @@
-.vagrant/
-.idea/
-top.sls
+# Git Ignore - .gitignore                                                  
+#fspath patterns that ensure that matching untracked files remain untracked
+
+.cask
+.projectile-bookmarks.eld
+
+# for directory tracking, add empty .gitignore to example/.
+!.gitignore
+
+
+# file browser metadata/artifacts
+.DS_Store
+.directory
+
+# other VCS' data
+.svn
+
+# ignore secret/personal stuffs (except example files)
+*.gpg
+*.asc
+.secret.d/*/*
+!*__example
+
+
+# unnecesary autosaves/backups
+*~
+*\#*
+auto-save-list/*
+~$*
+
+
+# temp ao cache files
+var/*/*
+tmp/*
+mnt/elpa/*
+
+
+# compiled ao binary
+*.pyc
+*.elc
+*.o
+
+projectile.cache
+projectile-bookmarks.eld
